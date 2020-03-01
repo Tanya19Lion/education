@@ -10,4 +10,17 @@ $(function(){
         // focusOnSelect: true,
     });
 
+    $(".rate_star").rateYo({
+        rating: 2,
+        readOnly: true,
+        starWidth: "18px"
+      });
+
+      $(".rate_star_five").rateYo({
+        rating: 5,
+        readOnly: true,
+        starWidth: "18px"
+      });
+
+      let mixitup = mixitup(".gallery_inner_items");
 });
