@@ -1,3 +1,4 @@
+
 html {
     box-sizing: border-box;
 }
@@ -23,6 +24,7 @@ ul, li {
 body {
     font-family: 'Open Sans';
     font-size: 14px;
+    font-weight: 400;
     // font-family: 'Roboto';
     // font-family: 'Roboto Slab';
 }
@@ -45,4 +47,30 @@ body {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
+}
+.title {
+    color: #555252;
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'Roboto Slab';
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.line {
+    height: 3px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    font-size: 0;
+    .gray_line {
+        height: 100%;
+        width: 40px;
+        background-color: #555252;
+        display: inline-block;
+    }
+    .orange_line {
+        width: 60px;
+        height: 100%;
+        background-color: #ff6600;
+        display: inline-block;
+    }
 }
