@@ -22,5 +22,5 @@ $(function(){
         starWidth: "18px"
       });
 
-      let mixitup = mixitup(".gallery_inner_items");
+      let mixer = mixitup(".gallery_inner_items");
 });

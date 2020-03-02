@@ -108,7 +108,7 @@
             max-width: 680px;
             font-family: 'Roboto Slab';
             color: #fff;
-            left: 200px;
+            left: 30%;
             top: 240px;
             &_title {
                 margin-bottom: 30px;
@@ -146,14 +146,14 @@
     outline: none;
     background-image: url(../images/icons/arrow_next.png);
     position: absolute;
-    right: 0;
+    right: 13%;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
 }
 .prev {
     background-image: url(../images/icons/arrow_previous.png);
-    left: 0;
+    left: 13%;
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
@@ -306,12 +306,13 @@
     &.mixitup-control-active {
         background-color: #e34b11;
         color: #fff;
+        outline: none;
     }
 }
 .gallery_inner_items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
 }
 .gallery_item {
     width: 285px;
@@ -357,10 +358,102 @@
         }
     }
 }
-
-
- 
-
-
 // end gallery
-  
+
+//start teachers 
+
+.teachers {
+    padding-top: 100px;
+    padding-bottom: 130px;
+    text-align: center;
+    &_inner {
+        display: flex;
+        justify-content: center;
+        &_item {
+            width: 285px;
+            height: 300px;
+        }
+    }
+}
+.teachers_item_box {
+    display: inline-block;
+    position: relative;
+}
+.teachers_item_box img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.teachers_item_name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+.teachers_item_position {
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.teachers_item_content {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(227, 75, 17, .812);
+    overflow: hidden;
+    transition: all .5s;
+    height: 0px;
+    bottom: 0;
+}
+.teachers_item_link a + a {
+    margin-left: 10px;
+}
+.teachers_item_box:hover  .teachers_item_content{
+    height: 50%;
+}
+//end teachers
+
+//start campus
+.campus {
+    padding-top: 100px;
+    padding-bottom: 130px;
+    text-align: center;
+    &_inner {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0;
+        &_box {
+        display: inline-block;
+        position: relative;
+            &:hover .campus_inner_box_shadow {
+                height: 100%;
+                transition: all .5s;
+            }
+        }
+    }
+}
+.campus_inner_box_shadow {
+    position: absolute;
+    background-color: rgba(0, 0, 2, .6);
+    bottom: 0;
+    width: 100%;
+    height: 0;
+}
+.box_shadow_horisontal {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    width: 100%;
+    height: 1px;
+}
+.box_shadow_vert {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background-color: #fff;
+    height: 150px;
+    width: 1px;
+}
+//end campus
+
