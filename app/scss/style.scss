@@ -415,6 +415,7 @@
 
 //start campus
 .campus {
+    background-color: #f2f2f2;
     padding-top: 100px;
     padding-bottom: 130px;
     text-align: center;
@@ -452,8 +453,194 @@
     transform: translateX(-50%);
     position: absolute;
     background-color: #fff;
-    height: 150px;
+    height: 100%;
     width: 1px;
 }
 //end campus
 
+//start news
+
+.news {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 130px;
+    &_inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.news_inner_instructors {
+    max-width: 350px;
+    width: 100%;
+}
+.instructors_box_name {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Roboto';
+    width: 100%;
+    position: relative;
+    padding-left: 50px;
+    background-color: #7d7d7e;
+    text-align: left;
+    color: #fff;
+    border-radius: 4px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    // margin-bottom: 5px;
+    transition: all .3s;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/icons/arrow_right.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        left: 0;
+        margin-left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.instructors_box_name.rotate {
+    background-color: $orange;
+        &::before {
+        transform: rotate(90deg);
+        top: 17%; 
+        }
+}
+.instructors_box_info {
+    text-align: center;
+    padding-right: 10px;
+    display: none;
+    &_images {
+        padding-top: 10px;
+    & img {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+    }
+    &_about {
+        margin-left: 10px;
+        &_subject {
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Roboto';
+            color: $text;
+            margin-bottom: 5px;
+        }
+        &_status {
+            font-family: 'Roboto';
+            font-weight: 300;
+            font-size: 18px;
+            color: $text;
+            line-height: 20px;
+            margin-bottom: 7px;
+        }
+        &_text {
+            text-align: left;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+    }
+}
+.news_inner_slider {
+    position: relative;
+    max-width: 730px;
+}
+.news_inner_slider_title, 
+.news_inner_instructors_title {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    color: $text;
+    text-align: left;
+}
+.news_slider_item {
+    max-width: 350px;
+    width: 100%;
+    text-align: left;
+    &_line {
+        margin-bottom: 25px;
+        height: 3px;
+        font-size: 0;
+        width: 100%;
+        .orange_line {
+            background-color: $orange;
+            display: inline-block;
+            width: 68px;
+            height: 100%;
+        }
+        .gray_line {
+            background-color: $text;
+            display: inline-block;
+            width: 68px;
+            height: 100%;
+        }
+    }
+    &_images img {
+        min-height: 260px;
+        width: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+    &_date a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 12px;
+        color: $text;
+    }
+    &_title a {
+        font-weight: 600;
+        font-size: 18px;
+        color: $text;
+        margin-bottom: 10px;
+    }
+    &_text {
+        margin-bottom: 25px;
+    }
+    &_btn a {
+        padding: 15px 45px;
+        background-color: $orange;
+        color: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.39);
+    }
+}
+.slick-dots {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    li {
+        display: inline-block;
+        & + li {
+            margin-left: 10px;
+        }
+        &.slick-active {
+            button {
+                background-color: $orange;
+            }
+        }
+    }
+    button {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #fff;
+        color: transparent;
+        border: 2px solid $orange;
+        outline: none;
+    }
+}
+
+//end news
