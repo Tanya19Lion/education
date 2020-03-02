@@ -10,7 +10,7 @@ $(function(){
 
     $(".news_inner_slider_wrapper").slick({
       slidesToShow: 2,
-      slidesToScroll: 1,
+      slidesToScroll: 2,
       dots: true,
       arrows: false
   });

@@ -197,18 +197,21 @@
     }
     &_text {
         font-weight: 300;
+        text-align: justify;
+        line-height: 20px;
     }
 }
 //end about
 
 //start courses
 .courses {
+    background-image: url(../images/content/course_background.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    min-height: 866px;
      &_inner {
-        min-height: 865px;
         background-color: rgba(204, 204, 204, .949);
         padding-top: 130px;
         padding-bottom: 130px;
@@ -644,3 +647,106 @@
 }
 
 //end news
+//start footer
+.footer_wrapper {
+    padding-top: 70px;
+    padding-bottom: 90px;
+    background-color: #2d3237;
+}
+.footer_copy {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer_inner {
+    display: flex;
+    justify-content: space-between;
+    &_item {
+        max-width: 350px;
+        width: 100%;
+    }
+    &_text {
+        color: #fff;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+    &_social {
+        .social_link {
+            height: 44px;
+        }
+        li {
+            display: inline-block;
+            height: 44px;
+            &:hover {
+                background-color: $orange;
+            }
+            & + li {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.footer_ttle {
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 25px;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 180px;
+        height: 3px;
+        background-color: $orange;
+        bottom: 0;
+        left: 0;
+    }
+}
+.footer_opening {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #6e7174;
+        & + div {
+            padding-top: 10px;
+        }
+}
+.footer_inner_form {
+    form {
+        width: 100%;
+    }
+    input,  textarea {
+        width: 100%;
+        border: 1px solid #6e7174;
+        background-color: transparent;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        margin-bottom: 15px;
+        &::placeholder {
+            color: #fff;
+        }
+    }
+    textarea {
+        height: 85px;
+        resize: none;
+    }
+    button {
+        padding: 10px 50px;
+        background-color: $orange;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+    }
+}
+//end footer
