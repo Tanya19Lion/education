@@ -3,12 +3,21 @@
 @import "fonts";
 
 //start header
-.header_inner_top,
+.header_top {
+    background-color: #24282e;
+}
+.header_inner_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
 .header_inner_bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 15px;
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
 .menu_list_top,
 .menu_list_bottom {
@@ -22,10 +31,10 @@
     }
 }
 .header_inner_top {
-    background-color: #24282e;
     a {
         font-weight: 300;
         color: #fff;
+        border-bottom: 1px solid transparent;
     }
 }
 .inner_top_info_phone {
@@ -56,34 +65,17 @@
 }
 .header_inner_bottom {
     background-color: #fff;
-    &_logo {
-        font-weight: 300;
-        font-size: 30px;
-        line-height: 32px;
-        font-family: 'Roboto';
-        color: $text;
-        padding-left: 50px;
-        position: relative;
-        &::before {
-            content:"";
-            position: absolute;
-            width: 49px;
-            height: 33px;
-            background-image: url(../images/header/logo.png);
-            left: 0;
-        }
-    }
 }
 .menu_list_bottom {
      a {
         color: #0f0101;
         font-weight: 700;
         text-transform: uppercase;
-        padding-left: 17px;
-        padding-right: 17px;
+        padding-left: 13px;
+        padding-right: 13px;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
-        transition: all .3s;
+        transition: all .5s;
         &:hover {
             color: $orange;
             border-left: 5px solid $orange;
@@ -91,6 +83,22 @@
         }
     }
 }
+.header_top_menu_btn, .header_bottom_menu_btn {
+    width: 32px;
+    display: none;
+}
+.header_top_menu_btn div, .header_bottom_menu_btn div  {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    & + div {
+        margin-top: 6px;
+    }
+}
+.header_bottom_menu_btn div {
+    background-color: $orange;
+}
+
 //end header
 
 //start slider
@@ -108,8 +116,9 @@
             max-width: 680px;
             font-family: 'Roboto Slab';
             color: #fff;
-            left: 30%;
+            left: 50%;
             top: 240px;
+            transform: translateX(-50%);
             &_title {
                 margin-bottom: 30px;
                 font-size: 60px;
@@ -130,6 +139,11 @@
                 color: #fff;
                 border: none;
                 font-family: 'Open Sans';
+                &:hover {
+                    background-color: #fff;
+                    color: $orange;
+                    font-weight: 700;
+                }
             }
         }
     }
@@ -200,6 +214,19 @@
         text-align: justify;
         line-height: 20px;
     }
+    .about_inner_item {
+        &:nth-child(1),
+        &:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+    }
+}
+.about_inner_item + .about_inner_item  {
+    margin-left: 25px;        
 }
 //end about
 
@@ -272,12 +299,17 @@
             border: 1px solid #e34b11;
             border-radius: 4px;
             box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.39);
+            transition: all .5s;
         }
         &_price {
             background-color: $orange;
             color: #fff;
             margin-right: 27px;
             box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.39);
+        }
+        &_details:hover {
+            background-color: $orange;
+            color: #fff;
         }
      }
 }
@@ -316,13 +348,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: -10px;
 }
 .gallery_item {
     width: 285px;
     min-height: 260px;
     font-size: 0;
-    flex-basis: calc(25% - 20px);
+    flex-basis: calc(25% - 10px);
+    margin-left: 10px;
+    margin-bottom: 20px;
 }
+
 .gallery_item_box {
     display: inline-block;
     position: relative;
@@ -348,7 +384,7 @@
     bottom: 0;
     width: 100%;
     overflow: hidden;
-    transition: all .5s;
+    transition: all .7s;
     & a {
         border: 1px solid #fff;
         padding: 10px;
@@ -375,7 +411,23 @@
         &_item {
             width: 285px;
             height: 300px;
+            margin-left: 20px;
         }
+    }
+}
+
+.teachers_inner_item {
+    &:nth-child(1) {
+        animation-delay: 0.3s;
+    }
+    &:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+    &:nth-child(3) {
+        animation-delay: 0.7s;
+    }
+    &:nth-child(4) {
+        animation-delay: 0.9s;
     }
 }
 .teachers_item_box {
@@ -436,6 +488,21 @@
         }
     }
 }
+.campus_inner_item {
+    margin-left: 20px;
+    &:nth-child(1) {
+        animation-delay: 0.3s;
+    }
+    &:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+    &:nth-child(3) {
+        animation-delay: 0.7s;
+    }
+    &:nth-child(4) {
+        animation-delay: 0.9s;
+    }
+}
 .campus_inner_box_shadow {
     position: absolute;
     background-color: rgba(0, 0, 2, .6);
@@ -490,7 +557,6 @@
     padding-top: 15px;
     padding-bottom: 15px;
     // margin-bottom: 5px;
-    transition: all .3s;
     &::before {
         content: "";
         position: absolute;
@@ -618,31 +684,38 @@
         color: #fff;
         border-radius: 4px;
         box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.39);
+        transition: all .5s;
+        &:hover {
+            background-color: #fff;
+            color: $orange;
+        }
     }
 }
-.slick-dots {
-    position: absolute;
-    top: -45px;
-    right: 0;
-    li {
-        display: inline-block;
-        & + li {
-            margin-left: 10px;
-        }
-        &.slick-active {
-            button {
-                background-color: $orange;
+.news_inner_slider_wrapper{
+    .slick-dots {
+        position: absolute;
+        top: -45px;
+        right: 0;
+        li {
+            display: inline-block;
+            & + li {
+                margin-left: 10px;
+            }
+            &.slick-active {
+                button {
+                    background-color: $orange;
+                }
             }
         }
-    }
-    button {
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background-color: #fff;
-        color: transparent;
-        border: 2px solid $orange;
-        outline: none;
+        button {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #fff;
+            color: transparent;
+            border: 2px solid $orange;
+            outline: none;
+        }
     }
 }
 
@@ -747,6 +820,12 @@
         border-radius: 4px;
         outline: none;
         cursor: pointer;
+        &:hover {
+            background-color: #fff;
+            color: $orange;
+        }
     }
 }
 //end footer
+
+@import "media";

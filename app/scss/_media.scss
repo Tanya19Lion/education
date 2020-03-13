@@ -1,0 +1,272 @@
+@media (max-width: 1270px) {
+    .teachers_inner {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .teachers_inner_item {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1218px) {
+    .main_slider_inner_info_title {
+        line-height: 66px;
+    }
+}
+
+@media (max-width: 1170px) { 
+    .about_inner, .courses_items {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .about_inner_item, .courses_item {
+        margin-bottom: 25px;
+    }
+    .about, .teachers, .gallery, .campus, .news {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .campus_inner {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .campus_inner_item {
+        margin-bottom: 20px;
+    }
+     .news_inner_slider {
+        max-width: 600px;
+    }
+    .news_inner_slider_title {
+        text-align: center;
+    }
+    .news_inner_instructors {
+        max-width: 425px;
+    }
+    .footer_inner {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer_inner_item {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header_bottom_menu_btn {
+        display: block;
+    }
+    .menu_list_bottom {
+        display: none;
+        position: absolute;
+        top: 125px;
+        right: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 3;
+        padding: 15px;
+        & li {
+            display: block;
+            text-align: center;
+        }
+        & li + li {
+            margin-top: 15px;
+        }
+        & a {
+            width: 100%;
+            padding-bottom: 4px;
+            transition: all .5s;
+        }
+    }
+    .header_inner_bottom_logo {
+        order: 1;
+    }
+}
+
+@media (max-width: 940px) {
+    .header_top_menu_btn {
+        display: block;
+    }
+    .menu_list_top {
+        display: none;
+        position: absolute;
+        top: 57px;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        background-color: #24282e;
+        padding: 15px;
+        width: 100%;
+        & li {
+            display: block;
+            text-align: center;
+        }
+        & li + li {
+            margin-left: 0;
+            margin-top: 15px;
+        }
+        & a {
+            width: 100%;
+            padding-bottom: 4px;
+            transition: all .5s;
+            &:hover {
+                border-bottom-color: #fff;
+            }
+        }
+    }
+    .news_inner_slider {
+        max-width: 520px;
+    }
+    .news_inner_slider_wrapper{
+        .slick-dots {
+            li + li {
+                margin-left: 6px;                    
+            }
+            button {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main_slider_inner {
+        min-height: 680px;
+    }
+    .main_slider_inner_info {
+        top: 155px;
+    }
+    .courses_inner, .gallery, .teachers, .campus, .news, .footer_wrapper {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .news_inner_slider {
+        max-width: 460px;
+    }
+}
+
+@media (max-width: 725px) {
+    .news_inner_slider {
+        max-width: 418px;
+    }
+}
+
+@media (max-width: 680px) {
+    .news_inner {
+        display: block;;
+    }
+    .news_inner_instructors {
+        max-width: 100%;
+        margin-bottom: 27px;
+    }
+    .instructors_box_info_about_text {
+        text-align: center;
+    }
+    .news_inner_slider {
+        max-width: 418px;
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery_inner_btn button {
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;
+        & + button {
+            margin-left: 0;
+        }
+    }
+    .teachers_inner_item {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .main_slider_inner {
+        min-height: 500px;
+    }
+    .main_slider_inner_info {
+        top: 50px;
+    }
+    .main_slider_inner_info_title {
+        font-size: 35px;
+        line-height: 37px;
+    }
+    .main_slider_inner_info_text {
+        line-height: 25px;
+    }
+    .line {
+         margin-bottom: 45px;
+    }
+    .title {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    .about_inner_item + .about_inner_item  {
+        margin-left: 0px;        
+    }
+    .campus_inner_item {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 460px) {
+    .inner_top_info_phone {
+        display: block;
+        padding-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+    .inner_top_info_email {
+        display: block;
+        padding-left: 20px;
+    }
+    .menu_list_top {
+        top: 80px;
+    }
+    .menu_list_bottom {
+        top: 145px
+    }
+    .news_inner_slider_title {
+        text-align: left;
+    }
+}
+
+@media (max-width: 399px) {
+    .courses_item_btn_price,
+    .courses_item_btn_details {
+        padding: 12px 14px;
+    }
+    .news_slider_item {
+        max-width: 270px;
+    }
+    .footer_inner_social li {
+        height: 33px;
+    }
+    .social_link img {
+        width: 33px;
+        height: 33px;
+    }
+
+}
+
+
+
+
+
+
+@media (min-width: 1000px) {
+    .menu_list_bottom {
+        display: block !important;
+    }
+    .header_inner_bottom_logo {
+        order: 0;
+    }
+}
+
+@media (min-width: 940px) {
+    .menu_list_top {
+        display: block !important;
+    }
+}
