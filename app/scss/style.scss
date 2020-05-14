@@ -35,6 +35,11 @@
         font-weight: 300;
         color: #fff;
         border-bottom: 1px solid transparent;
+        transition: all .5s;
+        &:hover,
+        &:focus {
+            color: lightsalmon;
+        }
     }
 }
 .inner_top_info_phone {
@@ -76,7 +81,8 @@
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         transition: all .5s;
-        &:hover {
+        &:hover,
+        &:focus {
             color: $orange;
             border-left: 5px solid $orange;
             border-right: 5px solid $orange;
@@ -139,7 +145,8 @@
                 color: #fff;
                 border: none;
                 font-family: 'Open Sans';
-                &:hover {
+                &:hover,
+                &:focus {
                     background-color: #fff;
                     color: $orange;
                     font-weight: 700;
@@ -205,7 +212,8 @@
         margin-bottom: 15px;
         text-transform: uppercase;
         transition: all .3s;
-        &:hover {
+        &:hover,
+        &:focus {
             color: $orange;
         }
     }
@@ -307,7 +315,8 @@
             margin-right: 27px;
             box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.39);
         }
-        &_details:hover {
+        &_details:hover,
+        &_details:focus {
             background-color: $orange;
             color: #fff;
         }
@@ -389,7 +398,8 @@
         border: 1px solid #fff;
         padding: 10px;
         display: none;
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $orange;
         }
         & + a {
@@ -463,7 +473,7 @@
 .teachers_item_link a + a {
     margin-left: 10px;
 }
-.teachers_item_box:hover  .teachers_item_content{
+.teachers_item_box:hover  .teachers_item_content {
     height: 50%;
 }
 //end teachers
@@ -683,11 +693,13 @@
         background-color: $orange;
         color: #fff;
         border-radius: 4px;
-        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.39);
         transition: all .5s;
-        &:hover {
+        border: 1px solid transparent;
+        &:hover,
+        &:focus {
             background-color: #fff;
             color: $orange;
+            border-color: $orange;
         }
     }
 }
@@ -753,7 +765,8 @@
         li {
             display: inline-block;
             height: 44px;
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: $orange;
             }
             & + li {
@@ -762,7 +775,7 @@
         }
     }
 }
-.footer_ttle {
+.footer_title {
     font-family: 'Roboto';
     font-size: 24px;
     font-weight: 700;
@@ -804,6 +817,11 @@
         padding-bottom: 10px;
         padding-left: 15px;
         margin-bottom: 15px;
+        outline: none;
+        &:focus {
+            // border-color: #fff;
+            box-shadow: 0px 0px 10px 2px $orange;
+        }
         &::placeholder {
             color: #fff;
         }
@@ -820,12 +838,23 @@
         border-radius: 4px;
         outline: none;
         cursor: pointer;
-        &:hover {
+        transition: all .5s;
+        &:hover,
+        &:focus {
             background-color: #fff;
             color: $orange;
         }
     }
 }
 //end footer
+
+.parallax-window {
+    background-image: url(../images/content/course_background.jpg);
+    min-height: 866px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 @import "media";

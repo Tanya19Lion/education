@@ -1,10 +1,10 @@
 @media (max-width: 1270px) {
     .teachers_inner {
         flex-wrap: wrap;
-        justify-content: space-around;
     }
     .teachers_inner_item {
         margin-bottom: 25px;
+        width: 47%;
     }
 }
 
@@ -15,11 +15,22 @@
 }
 
 @media (max-width: 1170px) { 
-    .about_inner, .courses_items {
+    .about_inner {
+        flex-wrap: wrap;
+        // justify-content: space-around;
+    }
+    .courses_items {
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    .about_inner_item, .courses_item {
+    .about_inner_item {
+        max-width: 47%;
+        margin-bottom: 25px;
+    }
+    .about_inner_item + .about_inner_item  {
+        margin-left: 0px;        
+    }
+    .courses_item {
         margin-bottom: 25px;
     }
     .about, .teachers, .gallery, .campus, .news {
@@ -48,6 +59,16 @@
     }
     .footer_inner_item {
         margin-bottom: 40px;
+    }
+    .footer_inner_item.full_scale {
+        max-width: 100%;
+        .footer_ttle {
+            text-align: center;
+            &::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     }
 }
 
@@ -146,9 +167,32 @@
     }
 }
 
+@media (max-width: 747px) {
+    .footer_inner_item.full_scale {
+        .footer_ttle {
+            text-align: left;
+            &::after {
+                left: 90px;
+            }
+        }
+    }
+    .footer_inner_item {
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 725px) {
     .news_inner_slider {
         max-width: 418px;
+    }
+    .teachers_inner {
+        justify-content: center;
+    }
+    .teachers_inner_item {
+        width: 100%;
+    }
+    .teachers_inner_item {
+        margin-left: 0;
     }
 }
 
@@ -177,9 +221,6 @@
             margin-left: 0;
         }
     }
-    .teachers_inner_item {
-        margin-left: 0;
-    }
 }
 
 @media (max-width: 550px) {
@@ -203,11 +244,14 @@
         font-size: 40px;
         margin-bottom: 10px;
     }
-    .about_inner_item + .about_inner_item  {
-        margin-left: 0px;        
-    }
     .campus_inner_item {
         margin-left: 0px;
+    }
+    .about_inner {
+        justify-content: center;
+    }
+    .about_inner_item {
+        max-width: 100%;
     }
 }
 
@@ -238,9 +282,6 @@
     .courses_item_btn_details {
         padding: 12px 14px;
     }
-    .news_slider_item {
-        max-width: 270px;
-    }
     .footer_inner_social li {
         height: 33px;
     }
@@ -251,8 +292,11 @@
 
 }
 
-
-
+@media (max-width: 349px) {
+    .news_slider_item {
+        max-width: 299px;
+    }
+}
 
 
 
